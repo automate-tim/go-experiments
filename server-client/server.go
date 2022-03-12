@@ -75,9 +75,8 @@ func sendData(conn net.Conn, cmdsIn chan string, results chan string) {
 		if testcmddata != nil {
 			log.Println("Writing data")
 			if _, err := conn.Write(testcmddata); err != nil {
-				log.Fatalln("Unable to write data")
+				log.Fatalln("Unable to write data to client: ", err)
 			}
-
 			// Receive data via conn.Read into a buffer.
 			size, err := conn.Read(b[0:])
 

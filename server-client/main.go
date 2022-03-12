@@ -1,5 +1,9 @@
 package main
 
+/*
+*  Client/Implant Connection Back to Server
+ */
+
 import (
 	"bytes"
 	"flag"
